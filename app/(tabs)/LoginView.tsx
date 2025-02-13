@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput,Alert, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TextInput,Alert,Image, TouchableOpacity, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 type LoginViewProps = {
@@ -20,6 +20,17 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
 
   return (
     <View style={styles.container}>
+
+      <Image 
+        source={require('../(tabs)/assests/yellow.png')}
+          style={{
+            height: 200,
+            width: 200,
+            marginTop: 10,
+            marginRight: 20,
+            alignSelf: 'flex-end'                 
+      }}
+      />
       
       <Text style={styles.loginTitle}>Login</Text>
 
