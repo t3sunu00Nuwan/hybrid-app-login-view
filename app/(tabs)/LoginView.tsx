@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TextInput,Alert, TouchableOpacity, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 type LoginViewProps = {
@@ -10,10 +10,13 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+
   const handleLogin = () => {
-    console.log("Login pressed");
+    Alert.alert("Login Successful");
     
   };
+
+
 
   return (
     <View style={styles.container}>
@@ -45,7 +48,7 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
           value={password}
           onChangeText={setPassword}
           autoCapitalize="none"
-          // Remove secureTextEntry to make password visible
+          
         />
       </View>
 
@@ -57,8 +60,12 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
 
       
       <TouchableOpacity onPress={onSignupPress}>
-        <Text style={styles.linkText}>Don't have an account? Sign up</Text>
+        <Text style={styles.accountAsk}>
+          Don't have an account?{" "}
+            <Text style={styles.linkText}>Sign up</Text>
+        </Text>
       </TouchableOpacity>
+
     </View>
   );
 };
@@ -113,6 +120,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginRight: 10,
+  },
+  accountAsk: {
+    textAlign: "center",
+    marginTop: 100,
+    color: "#666",
   },
   linkText: {
     color: "#ffa500",

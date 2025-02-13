@@ -20,6 +20,7 @@ const SignupView = ({ onLoginPress }: SignupViewProps) => {
   return (
     <View style={styles.container}>
       
+      
       <TouchableOpacity onPress={onLoginPress} style={styles.backButton}>
         <Icon name="arrow-back" size={24} color="#007BFF" />
       </TouchableOpacity>
@@ -87,7 +88,9 @@ const SignupView = ({ onLoginPress }: SignupViewProps) => {
 
       
       <TouchableOpacity onPress={onLoginPress}>
-        <Text style={styles.linkText}>Already have an account? Sign in</Text>
+        <Text style={styles.accountAsk}>Already have an account?{" "}
+          <Text style={styles.linkText}> Sign in</Text>
+        </Text>
       </TouchableOpacity>
     </View>
   );
@@ -148,6 +151,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     marginRight: 10,
+  },
+  accountAsk: {
+    textAlign: "center",
+    marginTop: 100,
+    color: "#666",
   },
   linkText: {
     color: "#ffa500",
