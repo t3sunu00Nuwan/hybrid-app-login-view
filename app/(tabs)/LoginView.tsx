@@ -19,6 +19,8 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
 
 
   return (
+    
+
     <View style={styles.container}>
 
       <Image 
@@ -84,7 +86,6 @@ const LoginView = ({ onSignupPress }: LoginViewProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     padding: 20,
     backgroundColor: "#f5f5f5",
   },

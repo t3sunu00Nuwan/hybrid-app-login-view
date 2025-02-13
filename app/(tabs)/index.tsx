@@ -9,8 +9,6 @@ export default function Index() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
 
 
-
-
   const toggleView = () => {
     setIsLoginVisible(!isLoginVisible);
   };

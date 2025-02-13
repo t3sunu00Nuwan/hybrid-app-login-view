@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity,Image, StyleSheet } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
+
+
+
 type SignupViewProps = {
   onLoginPress: () => void;
 };
+
+
 
 const SignupView = ({ onLoginPress }: SignupViewProps) => {
   const [fullName, setFullName] = useState("");
@@ -12,8 +17,10 @@ const SignupView = ({ onLoginPress }: SignupViewProps) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
+
+
   const handleSignup = () => {
-    console.log("Signup pressed");
+    console.log("Signup sucessful");
     
   };
 
@@ -110,7 +117,6 @@ const SignupView = ({ onLoginPress }: SignupViewProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     padding: 20,
     backgroundColor: "#f5f5f5",
   },
